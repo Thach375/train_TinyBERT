@@ -1,0 +1,23 @@
+torch>=2.1.0
+transformers>=4.36.0
+datasets>=2.16.0
+tokenizers>=0.15.0
+
+# Training
+pytorch-lightning>=2.1.0
+torchmetrics>=1.2.0
+
+# Configuration
+pyyaml>=6.0
+
+# Experiment tracking (install the one you use)
+wandb>=0.16.0
+
+# Utilities
+tqdm
+numpy>=1.24.0
+scipy>=0.14.0
+seaborn
+
+# Testing
+pytest>=7.0.0
