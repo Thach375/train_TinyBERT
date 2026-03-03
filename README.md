@@ -11,7 +11,7 @@ Knowledge distillation trains a small *student* to mimic a large *teacher* by ma
 
 **Stage 1 — General Distillation** on a large unlabelled corpus (WikiText-103):
 
-$$\mathcal{L}_{\text{gen}} = \alpha_{\text{emb}}\,\mathcal{L}_{\text{emb}} + \alpha_{\text{hid}}\,\mathcal{L}_{\text{hid}} + \alpha_{\text{att}}\,\mathcal{L}_{\text{att}}$$
+$$\mathcal{L}_{\text{gen}} = \alpha_{\text{emb}}\.\mathcal{L}_{\text{emb}} + \alpha_{\text{hid}}\.\mathcal{L}_{\text{hid}} + \alpha_{\text{att}}\.\mathcal{L}_{\text{att}}$$
 
 **Stage 2 — Task Distillation** on a downstream GLUE task (MNLI), two phases:
 
