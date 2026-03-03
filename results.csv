@@ -1,5 +1,5 @@
 run,acc_train,acc_val,params_M,path
-baseline,0.8896,0.8069,14.4,outputs\task_distill\baseline\student_hf
+baseline,0.8896,0.8169,14.4,outputs\task_distill\baseline\student_hf
 no_attn_embd,0.8840,0.8094,14.4,outputs\task_distill\no_attn_embd\student_hf
 no_attn_loss,0.8884,0.8083,14.4,outputs\task_distill\no_attn_loss\student_hf
 no_stage1,0.8912,0.8084,14.4,outputs\task_distill\no_stage1\student_hf
