@@ -1,0 +1,39 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+.vscode/
+.idea/
+.~
+
+# Loại bỏ các file checkpoint và model nặng
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.h5
+outputs
+
+# Loại bỏ folder chứa model đã train
+output/
+checkpoints/
+saved_models/
+models/bert-base-uncased/
+
+# Datasets & Logs
+datasets/
+*.tsv
+*.jsonl
+*.bin
+*.idx
+
+# Weights & Biases (WandB) logs
+wandb/
+
+.DS_Store
+Thumbs.db
+*.log
+*.yaml.bak

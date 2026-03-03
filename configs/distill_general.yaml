@@ -1,0 +1,49 @@
+# General distillation
+# Transfers intermediate representations on a large unlabelled corpus
+
+defaults:
+  - model/teacher: teacher
+  - model/student: student
+
+# Distillation hyper-parameters 
+distillation:
+  # Layer mapping: teacher_layers[i] to student_layers[i]
+  teacher_layer_indices: [2, 5, 8, 11]
+
+  # Loss component weights
+  alpha_embd: 1.0         # embedding-layer
+  alpha_hidn: 1.0         # hidden-state
+  alpha_attn: 1.0         # attention-map
+
+  temperature: 1.0        
+
+# Training 
+training:
+  max_epochs: 3
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  batch_size: 64
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+  precision: "16-mixed"
+  num_workers: 0 
+  seed: 42
+
+# Data
+data:
+  dataset_name: "wikitext"        # HF Datasets identifier
+  dataset_config: "wikitext-103-raw-v1"
+  max_seq_length: 128
+  mlm_probability: 0.15          # mask ratio for MLM pre-training objective
+
+# Paths
+paths:
+  output_dir: "outputs/general_distill"
+  cache_dir: null   # null = dùng HuggingFace default (~/.cache/huggingface/hub)
+
+# Logging
+logging:
+  project: "tinybert-general"
+  logger: "wandb"
+  log_every_n_steps: 50

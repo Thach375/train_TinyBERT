@@ -1,0 +1,13 @@
+# Student (TinyBERT) model configuration
+# TinyBERT_4L-312H  (4 layers, hidden=312, intermediate=1200, heads=12)
+
+name_or_path: null
+hidden_size: 312
+num_hidden_layers: 4
+num_attention_heads: 12
+intermediate_size: 1200
+max_position_embeddings: 512
+vocab_size: 30522
+hidden_act: "gelu"
+hidden_dropout_prob: 0.1
+attention_probs_dropout_prob: 0.1
