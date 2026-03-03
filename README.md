@@ -18,7 +18,7 @@ $$\mathcal{L}_{\text{gen}} = \alpha_{\text{emb}}\.\mathcal{L}_{\text{emb}} + \al
 - **Phase 2a** (intermediate): same $\mathcal{L}_{\text{emb}} + \mathcal{L}_{\text{hid}} + \mathcal{L}_{\text{att}}$ on task data  
 - **Phase 2b** (prediction): soft-label KL + optional hard-label CE
 
-$$\mathcal{L}_{\text{task}} = \alpha_{\text{pred}}\,\mathcal{L}_{\text{KL}}(T) + \alpha_{\text{hard}}\,\mathcal{L}_{\text{CE}}$$
+$$\mathcal{L}_{\text{task}} = \alpha_{\text{pred}}\.\mathcal{L}_{\text{KL}}(T) + \alpha_{\text{hard}}\.\mathcal{L}_{\text{CE}}$$
 
 ---
 
